@@ -1,0 +1,269 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "2.1 Define the Transaction, CategoryTotals, and ValidationResult data shapes as JSDoc `@typedef` comments at the top of `js/app.js`": [
+      {
+        "executionId": "32c6476d-ca9a-4869-8cc7-df26791475a5",
+        "chatSessionId": "sess_b4364a58-0208-4218-9894-433c13c3b4a0",
+        "timestamp": 1790264613173
+      }
+    ],
+    "2.2 Implement `StorageService.load()` and `StorageService.save(transactions)`": [
+      {
+        "executionId": "3753cc55-cdb8-4d63-9f6a-a339eae69098",
+        "chatSessionId": "sess_ae6599ff-30ac-4064-b82a-811e9cdbfbcd",
+        "timestamp": 1790264699211
+      },
+      {
+        "executionId": "3753cc55-cdb8-4d63-9f6a-a339eae69098",
+        "chatSessionId": "sess_ae6599ff-30ac-4064-b82a-811e9cdbfbcd",
+        "timestamp": 1790264799253
+      }
+    ],
+    "2. Implement data models and StorageService": [
+      {
+        "executionId": "3753cc55-cdb8-4d63-9f6a-a339eae69098",
+        "chatSessionId": "sess_ae6599ff-30ac-4064-b82a-811e9cdbfbcd",
+        "timestamp": 1790264811634
+      }
+    ],
+    "3.1 Implement `Validator.validateForm(name, amount, category)` returning `{ valid, errors }`": [
+      {
+        "executionId": "74223ae7-efa1-4e88-a563-408db010fd11",
+        "chatSessionId": "sess_ca44a592-51f6-4b10-94e1-592bbe2a3b2c",
+        "timestamp": 1790265007741
+      },
+      {
+        "executionId": "74223ae7-efa1-4e88-a563-408db010fd11",
+        "chatSessionId": "sess_ca44a592-51f6-4b10-94e1-592bbe2a3b2c",
+        "timestamp": 1790265089985
+      }
+    ],
+    "3. Implement Validator": [
+      {
+        "executionId": "74223ae7-efa1-4e88-a563-408db010fd11",
+        "chatSessionId": "sess_ca44a592-51f6-4b10-94e1-592bbe2a3b2c",
+        "timestamp": 1790265094420
+      }
+    ],
+    "4.1 Implement `TransactionService.roundAmount(value)`": [
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265244776
+      },
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265355458
+      }
+    ],
+    "4.3 Implement `TransactionService.create(name, amount, category)`": [
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265384294
+      },
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265407625
+      },
+      {
+        "executionId": "279ae2ce-9713-497e-8e74-e7496295fe54",
+        "chatSessionId": "sess_e3d20f0e-853e-4773-9343-c9755fbcc25b",
+        "timestamp": 1790265644504
+      },
+      {
+        "executionId": "279ae2ce-9713-497e-8e74-e7496295fe54",
+        "chatSessionId": "sess_e3d20f0e-853e-4773-9343-c9755fbcc25b",
+        "timestamp": 1790265770864
+      }
+    ],
+    "4.4 Implement `TransactionService.remove(transactions, id)`": [
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265452010
+      },
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265471327
+      },
+      {
+        "executionId": "72e05ca5-f5ad-4aeb-9195-bf79a94d4fa3",
+        "chatSessionId": "sess_69ac2419-3e30-4ffd-a23d-a7a9f6973355",
+        "timestamp": 1790265909456
+      },
+      {
+        "executionId": "72e05ca5-f5ad-4aeb-9195-bf79a94d4fa3",
+        "chatSessionId": "sess_69ac2419-3e30-4ffd-a23d-a7a9f6973355",
+        "timestamp": 1790266309311
+      }
+    ],
+    "4.6 Implement `TransactionService.sortByDate(transactions)`": [
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265485268
+      },
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265500247
+      }
+    ],
+    "4.8 Implement `TransactionService.calcBalance(transactions)`": [
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265516192
+      },
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265533726
+      }
+    ],
+    "4.10 Implement `TransactionService.calcCategoryTotals(transactions)`": [
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265549560
+      },
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265565188
+      }
+    ],
+    "4. Implement TransactionService": [
+      {
+        "executionId": "36321b97-f56d-4335-9991-ac4dfd25b943",
+        "chatSessionId": "sess_0b62413a-2d89-4d75-9964-2dbf374d2ea7",
+        "timestamp": 1790265571322
+      }
+    ],
+    "6.3 Implement `UIRenderer.showFormErrors(errors)` and `UIRenderer.clearFormErrors()`": [
+      {
+        "executionId": "68bdb1c5-8812-44cf-ba3d-9b670d5b44f1",
+        "chatSessionId": "sess_237f5670-1645-4a29-b418-415323931d0b",
+        "timestamp": 1790266601102
+      },
+      {
+        "executionId": "68bdb1c5-8812-44cf-ba3d-9b670d5b44f1",
+        "chatSessionId": "sess_237f5670-1645-4a29-b418-415323931d0b",
+        "timestamp": 1790266697660
+      }
+    ],
+    "6.4 Implement `UIRenderer.resetForm()`": [
+      {
+        "executionId": "d1d9f220-6edf-4cf9-9449-4bf6ec09a939",
+        "chatSessionId": "sess_b128e7ac-bcbc-4fa3-92ac-e98b704426f5",
+        "timestamp": 1790266746598
+      },
+      {
+        "executionId": "d1d9f220-6edf-4cf9-9449-4bf6ec09a939",
+        "chatSessionId": "sess_b128e7ac-bcbc-4fa3-92ac-e98b704426f5",
+        "timestamp": 1790266823615
+      }
+    ],
+    "6.5 Implement `UIRenderer.showNotification(message)`": [
+      {
+        "executionId": "1787531d-3708-49c9-a81b-7d1fa5d37d00",
+        "chatSessionId": "sess_0faa1c4a-75f9-4f17-9d67-3a57fde8c9be",
+        "timestamp": 1790266919641
+      },
+      {
+        "executionId": "1787531d-3708-49c9-a81b-7d1fa5d37d00",
+        "chatSessionId": "sess_0faa1c4a-75f9-4f17-9d67-3a57fde8c9be",
+        "timestamp": 1790267057101
+      }
+    ],
+    "7. Implement Chart.js pie chart rendering": [
+      {
+        "executionId": "b452069c-86fc-4ba6-90d0-6882b3f9a963",
+        "chatSessionId": "sess_fc86a457-829f-4fb1-92ef-0dcde4d7eb05",
+        "timestamp": 1790267180262
+      },
+      {
+        "executionId": "b452069c-86fc-4ba6-90d0-6882b3f9a963",
+        "chatSessionId": "sess_fc86a457-829f-4fb1-92ef-0dcde4d7eb05",
+        "timestamp": 1790267499730
+      }
+    ],
+    "7.1 Implement `UIRenderer.renderChart(categoryTotals)`": [
+      {
+        "executionId": "b452069c-86fc-4ba6-90d0-6882b3f9a963",
+        "chatSessionId": "sess_fc86a457-829f-4fb1-92ef-0dcde4d7eb05",
+        "timestamp": 1790267445177
+      }
+    ],
+    "7.2 Implement the empty-state for the chart": [
+      {
+        "executionId": "b452069c-86fc-4ba6-90d0-6882b3f9a963",
+        "chatSessionId": "sess_fc86a457-829f-4fb1-92ef-0dcde4d7eb05",
+        "timestamp": 1790267482912
+      }
+    ],
+    "8.1 Implement `handleFormSubmit(event)`": [
+      {
+        "executionId": "8311c024-f1f6-4e09-a6ba-4fef5e17b3d1",
+        "chatSessionId": "sess_e6eb3216-f60c-4ebd-91a0-6cd74595c564",
+        "timestamp": 1790267833679
+      },
+      {
+        "executionId": "8311c024-f1f6-4e09-a6ba-4fef5e17b3d1",
+        "chatSessionId": "sess_e6eb3216-f60c-4ebd-91a0-6cd74595c564",
+        "timestamp": 1790268112831
+      },
+      {
+        "executionId": "ae5ea181-d67b-4804-8dda-f1af83f28dde",
+        "chatSessionId": "sess_432b8f56-5911-48c7-8955-6670eca58292",
+        "timestamp": 1790268238704
+      },
+      {
+        "executionId": "ae5ea181-d67b-4804-8dda-f1af83f28dde",
+        "chatSessionId": "sess_432b8f56-5911-48c7-8955-6670eca58292",
+        "timestamp": 1790268380397
+      }
+    ],
+    "8.3 Implement `handleDeleteClick(event)`": [
+      {
+        "executionId": "8311c024-f1f6-4e09-a6ba-4fef5e17b3d1",
+        "chatSessionId": "sess_e6eb3216-f60c-4ebd-91a0-6cd74595c564",
+        "timestamp": 1790267853591
+      },
+      {
+        "executionId": "8311c024-f1f6-4e09-a6ba-4fef5e17b3d1",
+        "chatSessionId": "sess_e6eb3216-f60c-4ebd-91a0-6cd74595c564",
+        "timestamp": 1790268134974
+      }
+    ],
+    "8.4 Implement `init()`": [
+      {
+        "executionId": "8311c024-f1f6-4e09-a6ba-4fef5e17b3d1",
+        "chatSessionId": "sess_e6eb3216-f60c-4ebd-91a0-6cd74595c564",
+        "timestamp": 1790267871912
+      },
+      {
+        "executionId": "8311c024-f1f6-4e09-a6ba-4fef5e17b3d1",
+        "chatSessionId": "sess_e6eb3216-f60c-4ebd-91a0-6cd74595c564",
+        "timestamp": 1790268159362
+      },
+      {
+        "executionId": "5a850342-fed2-4f15-a5ff-2f63a6b8fd2c",
+        "chatSessionId": "sess_d5bce1de-908e-4246-adf0-f343229112fa",
+        "timestamp": 1790268674240
+      }
+    ],
+    "8. Implement event handlers and `init()`": [
+      {
+        "executionId": "8311c024-f1f6-4e09-a6ba-4fef5e17b3d1",
+        "chatSessionId": "sess_e6eb3216-f60c-4ebd-91a0-6cd74595c564",
+        "timestamp": 1790268172218
+      }
+    ]
+  }
+}

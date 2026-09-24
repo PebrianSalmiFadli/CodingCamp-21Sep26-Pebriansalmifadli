@@ -1,79 +1,84 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense & Budget Visualizer</title>
-    <!-- Tailwind CSS v4 Play CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Modular Expense Tracker</title>
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Stylesheet (disesuaikan ke folder css/) -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-slate-100 text-slate-800 flex justify-center p-4 min-h-screen">
-    <div class="w-full max-w-md bg-white p-6 rounded-2xl shadow-lg h-fit">
+<body>
+
+    <!-- Non-blocking Notification Banner -->
+    <div id="notification"></div>
+
+    <div class="app-container">
         
-        <!-- Header -->
-        <header class="mb-6 text-center">
-            <h1 class="text-xl font-bold text-slate-900 mb-4">Expense & Budget Visualizer</h1>
-            <div class="bg-blue-600 text-white p-4 rounded-xl shadow-md">
-                <h3 class="text-sm font-medium uppercase tracking-wider text-blue-100">Total Balance</h3>
-                <h2 id="total-balance" class="text-3xl font-extrabold mt-1">$0.00</h2>
+        <!-- Header & Total Balance -->
+        <header>
+            <div>
+                <p>Total Balance</p>
+                <h1 id="balance-amount">$0.00</h1>
             </div>
         </header>
 
-        <!-- Input Form Section -->
-        <section class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <h3 class="text-sm font-semibold text-slate-700 mb-3">Add Transaction</h3>
-            <form id="transaction-form" class="space-y-3">
+        <!-- Input Form -->
+        <section>
+            <h2>Add Transaction</h2>
+            
+            <form id="expense-form" novalidate>
                 <div>
-                    <label class="block text-xs font-medium text-slate-600 mb-1">Item Name</label>
-                    <input type="text" id="item-name" placeholder="Enter item name..." required
-                        class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                    <label for="item-name">Item Name</label>
+                    <input type="text" id="item-name" placeholder="e.g., Weekly groceries">
+                    <span id="error-name" class="error"></span>
                 </div>
+
                 <div>
-                    <label class="block text-xs font-medium text-slate-600 mb-1">Amount</label>
-                    <input type="number" id="item-amount" placeholder="Enter amount..." step="0.01" required
-                        class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                    <label for="item-amount">Amount ($)</label>
+                    <input type="number" step="0.01" id="item-amount" placeholder="0.00">
+                    <span id="error-amount" class="error"></span>
                 </div>
+
                 <div>
-                    <label class="block text-xs font-medium text-slate-600 mb-1">Category</label>
-                    <select id="item-category" required
-                        class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                    <label for="item-category">Category</label>
+                    <select id="item-category">
+                        <option value="">Select category</option>
                         <option value="Food">Food</option>
                         <option value="Transport">Transport</option>
                         <option value="Fun">Fun</option>
                     </select>
+                    <span id="error-category" class="error"></span>
                 </div>
-                <button type="submit" 
-                    class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 rounded-lg transition duration-200 shadow-sm cursor-pointer">
-                    Add Transaction
-                </button>
+
+                <button type="submit">Add Transaction</button>
             </form>
         </section>
 
-        <!-- Transaction List Section -->
-        <section class="mb-6">
-            <h3 class="text-sm font-semibold text-slate-700 mb-2">Transactions</h3>
-            <div class="max-h-40 overflow-y-auto border border-slate-200 rounded-xl p-2 bg-slate-50">
-                <ul id="transaction-list" class="space-y-2">
-                    <!-- Data transaksi akan masuk lewat JavaScript -->
-                </ul>
+        <!-- Visual Chart -->
+        <section>
+            <h2>Spending Distribution</h2>
+            <div class="chart-container">
+                <canvas id="spending-chart"></canvas>
+                <p id="chart-empty-state">No spending data to display yet.</p>
             </div>
         </section>
 
-        <!-- Visual Chart Section -->
+        <!-- Transaction List -->
         <section>
-            <h3 class="text-sm font-semibold text-slate-700 mb-2 text-center">Spending by Category</h3>
-            <div class="w-full flex justify-center">
-                <div class="w-64 h-64">
-                    <canvas id="expenseChart"></canvas>
-                </div>
-            </div>
+            <h2>Transaction History</h2>
+            
+            <p id="empty-state">No transactions added yet.</p>
+
+            <ul id="transaction-items">
+                <!-- Dynamically populated via UIRenderer -->
+            </ul>
         </section>
 
     </div>
 
-    <script src="js/script.js"></script>
+    <!-- Link your main app file (disesuaikan ke folder js/) -->
+    <script src="js/app.js"></script>
 </body>
 </html>
