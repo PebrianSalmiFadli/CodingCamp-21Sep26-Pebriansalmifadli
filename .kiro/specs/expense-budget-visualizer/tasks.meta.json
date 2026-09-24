@@ -1,0 +1,172 @@
+{
+  "specId": "expense-budget-visualizer",
+  "specTitle": "Expense & Budget Visualizer — Full Feature Build",
+  "createdAt": "2026-09-24T00:00:00.000Z",
+  "updatedAt": "2026-09-24T21:52:00.000Z",
+  "status": "completed",
+  "totalTasks": 63,
+  "completedTasks": 63,
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Project Setup",
+      "tasks": ["TASK-01", "TASK-02", "TASK-03", "TASK-04"],
+      "status": "completed"
+    },
+    {
+      "phase": 2,
+      "name": "HTML Structure",
+      "tasks": ["TASK-05", "TASK-06", "TASK-07", "TASK-08", "TASK-09", "TASK-10", "TASK-11"],
+      "status": "completed"
+    },
+    {
+      "phase": 3,
+      "name": "CSS Styling",
+      "tasks": [
+        "TASK-12", "TASK-13", "TASK-14", "TASK-15", "TASK-16",
+        "TASK-17", "TASK-18", "TASK-19", "TASK-20", "TASK-21",
+        "TASK-22", "TASK-23", "TASK-24", "TASK-25"
+      ],
+      "status": "completed"
+    },
+    {
+      "phase": 4,
+      "name": "JavaScript Core",
+      "tasks": ["TASK-26", "TASK-27", "TASK-28", "TASK-29"],
+      "status": "completed"
+    },
+    {
+      "phase": 5,
+      "name": "LocalStorage",
+      "tasks": ["TASK-30", "TASK-31", "TASK-32"],
+      "status": "completed"
+    },
+    {
+      "phase": 6,
+      "name": "Feature: Form & Validation",
+      "tasks": ["TASK-33", "TASK-34", "TASK-35", "TASK-36"],
+      "status": "completed"
+    },
+    {
+      "phase": 7,
+      "name": "Feature: Balance & Budget Limit",
+      "tasks": ["TASK-37", "TASK-38", "TASK-39", "TASK-40", "TASK-41"],
+      "status": "completed"
+    },
+    {
+      "phase": 8,
+      "name": "Feature: Chart",
+      "tasks": ["TASK-42", "TASK-43", "TASK-44", "TASK-45"],
+      "status": "completed"
+    },
+    {
+      "phase": 9,
+      "name": "Feature: Transaction List & Sort",
+      "tasks": ["TASK-46", "TASK-47", "TASK-48", "TASK-49"],
+      "status": "completed"
+    },
+    {
+      "phase": 10,
+      "name": "Feature: Dark / Light Mode",
+      "tasks": ["TASK-50", "TASK-51", "TASK-52"],
+      "status": "completed"
+    },
+    {
+      "phase": 11,
+      "name": "Bootstrap & Integration",
+      "tasks": ["TASK-53", "TASK-54", "TASK-55"],
+      "status": "completed"
+    },
+    {
+      "phase": 12,
+      "name": "QA & Verification",
+      "tasks": [
+        "TASK-56", "TASK-57", "TASK-58", "TASK-59",
+        "TASK-60", "TASK-61", "TASK-62", "TASK-63"
+      ],
+      "status": "completed"
+    }
+  ],
+  "taskDetails": [
+    { "id": "TASK-01", "phase": 1, "title": "Buat folder css/ dan js/", "status": "completed", "files": [] },
+    { "id": "TASK-02", "phase": 1, "title": "Buat index.html dengan boilerplate HTML5", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-03", "phase": 1, "title": "Tambah Chart.js CDN ke index.html", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-04", "phase": 1, "title": "Buat file css/style.css dan js/script.js kosong", "status": "completed", "files": ["css/style.css", "js/script.js"] },
+    { "id": "TASK-05", "phase": 2, "title": "Buat header dengan brand dan theme toggle", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-06", "phase": 2, "title": "Buat balance card dengan progress bar dan warning", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-07", "phase": 2, "title": "Buat budget panel dengan input limit", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-08", "phase": 2, "title": "Buat form transaksi dengan 3 field + error spans", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-09", "phase": 2, "title": "Buat section chart dengan canvas dan empty state", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-10", "phase": 2, "title": "Buat section daftar transaksi dengan sort dropdown", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-11", "phase": 2, "title": "Buat footer", "status": "completed", "files": ["index.html"] },
+    { "id": "TASK-12", "phase": 3, "title": "Definisikan CSS custom properties di :root", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-13", "phase": 3, "title": "Definisikan dark mode token override", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-14", "phase": 3, "title": "Styling header dan btn-theme", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-15", "phase": 3, "title": "Styling balance-card dan budget-panel", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-16", "phase": 3, "title": "Styling limit-bar, modifiers, dan warning", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-17", "phase": 3, "title": "Styling form fields dan input states", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-18", "phase": 3, "title": "Styling button variants", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-19", "phase": 3, "title": "Styling card component", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-20", "phase": 3, "title": "Styling chart container dan empty state", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-21", "phase": 3, "title": "Styling tx-list, tx-item, dot, badge", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-22", "phase": 3, "title": "Tambah keyframe animations", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-23", "phase": 3, "title": "Layout grid-two dengan CSS Grid", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-24", "phase": 3, "title": "Media queries responsif 700px dan 480px", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-25", "phase": 3, "title": "Styling footer", "status": "completed", "files": ["css/style.css"] },
+    { "id": "TASK-26", "phase": 4, "title": "Definisikan konstanta LS keys dan CAT maps", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-27", "phase": 4, "title": "Definisikan state variables", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-28", "phase": 4, "title": "Buat objek dom dengan 26 referensi elemen", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-29", "phase": 4, "title": "Implementasi utility functions", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-30", "phase": 5, "title": "Implementasi loadStorage() dengan try/catch", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-31", "phase": 5, "title": "Implementasi saveTx()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-32", "phase": 5, "title": "Implementasi saveLimit(), saveTheme(), getSavedTheme()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-33", "phase": 6, "title": "Implementasi setValid() per field", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-34", "phase": 6, "title": "Implementasi validateAll()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-35", "phase": 6, "title": "Event listener form submit", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-36", "phase": 6, "title": "Event listener inline error clear", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-37", "phase": 7, "title": "Implementasi getTotal()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-38", "phase": 7, "title": "Implementasi renderBalance() dengan progress bar dan shake", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-39", "phase": 7, "title": "Event listener setBudgetBtn", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-40", "phase": 7, "title": "Event listener clearBudgetBtn", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-41", "phase": 7, "title": "Event listener Enter pada budgetInput", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-42", "phase": 8, "title": "Implementasi getCategoryTotals()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-43", "phase": 8, "title": "Implementasi initChart() dengan Chart.js", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-44", "phase": 8, "title": "Implementasi syncChartTheme()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-45", "phase": 8, "title": "Implementasi renderChart()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-46", "phase": 9, "title": "Implementasi sorted() dengan 6 opsi", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-47", "phase": 9, "title": "Implementasi renderList() dengan esc()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-48", "phase": 9, "title": "Event listener delete via event delegation", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-49", "phase": 9, "title": "Event listener sortSelect change", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-50", "phase": 10, "title": "Implementasi applyTheme()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-51", "phase": 10, "title": "Implementasi toggleTheme()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-52", "phase": 10, "title": "Event listener themeToggle click", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-53", "phase": 11, "title": "Implementasi refreshAll()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-54", "phase": 11, "title": "Implementasi init()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-55", "phase": 11, "title": "Guard CDN Chart.js sebelum init()", "status": "completed", "files": ["js/script.js"] },
+    { "id": "TASK-56", "phase": 12, "title": "Verifikasi 26 DOM ID match antara HTML dan JS", "status": "completed", "files": [] },
+    { "id": "TASK-57", "phase": 12, "title": "Verifikasi tidak ada file CSS/JS tambahan", "status": "completed", "files": [] },
+    { "id": "TASK-58", "phase": 12, "title": "Verifikasi data flow tambah transaksi end-to-end", "status": "completed", "files": [] },
+    { "id": "TASK-59", "phase": 12, "title": "Verifikasi LocalStorage persistence setelah refresh", "status": "completed", "files": [] },
+    { "id": "TASK-60", "phase": 12, "title": "Verifikasi tema tersimpan setelah refresh", "status": "completed", "files": [] },
+    { "id": "TASK-61", "phase": 12, "title": "Verifikasi budget limit tersimpan setelah refresh", "status": "completed", "files": [] },
+    { "id": "TASK-62", "phase": 12, "title": "Verifikasi validasi form", "status": "completed", "files": [] },
+    { "id": "TASK-63", "phase": 12, "title": "Verifikasi XSS prevention", "status": "completed", "files": [] }
+  ],
+  "outputFiles": [
+    {
+      "path": "index.html",
+      "description": "Entry point HTML — struktur, semantic markup, CDN link",
+      "sizeKB": 5.7
+    },
+    {
+      "path": "css/style.css",
+      "description": "Single CSS file — design tokens, komponen, dark mode, responsif",
+      "sizeKB": 19.1
+    },
+    {
+      "path": "js/script.js",
+      "description": "Single JS file — state, storage, chart, render, events",
+      "sizeKB": 15.8
+    }
+  ]
+}

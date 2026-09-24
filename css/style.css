@@ -1,0 +1,657 @@
+/* =============================================================
+   Expense & Budget Visualizer — style.css
+   Single CSS file · Light + Dark theme · Fully Responsive
+   ============================================================= */
+
+/* ─────────────────────────────────────────────────────────────
+   1. DESIGN TOKENS
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* Surface */
+  --bg:            #f1f5f9;
+  --surface:       #ffffff;
+  --surface-2:     #f8fafc;
+  --border:        #e2e8f0;
+
+  /* Text */
+  --text:          #0f172a;
+  --text-muted:    #64748b;
+
+  /* Brand */
+  --primary:       #6366f1;
+  --primary-dark:  #4f46e5;
+  --primary-light: #e0e7ff;
+
+  /* Semantic */
+  --danger:        #ef4444;
+  --danger-soft:   #fef2f2;
+  --warning:       #f59e0b;
+  --warning-soft:  #fffbeb;
+  --success:       #10b981;
+
+  /* Category */
+  --food:      #f97316;
+  --transport: #3b82f6;
+  --fun:       #a855f7;
+
+  /* Radii */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.05);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.09), 0 2px 4px rgba(0,0,0,.05);
+
+  /* Motion */
+  --ease: .2s ease;
+
+  /* Font */
+  --font: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  --mono: 'Consolas', 'Courier New', monospace;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --bg:            #0b1120;
+  --surface:       #162032;
+  --surface-2:     #0f1929;
+  --border:        #1e3048;
+  --text:          #e2e8f0;
+  --text-muted:    #94a3b8;
+  --primary:       #818cf8;
+  --primary-dark:  #6366f1;
+  --primary-light: #1e2a5e;
+  --danger:        #f87171;
+  --danger-soft:   #3b0a0a;
+  --warning:       #fbbf24;
+  --warning-soft:  #3b1f00;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.3);
+  --shadow-md: 0 4px 20px rgba(0,0,0,.45);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   2. RESET & BASE
+   ───────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 15px;
+  transition: background var(--ease), color var(--ease);
+}
+
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; }
+input, select { font-family: inherit; }
+
+/* ─────────────────────────────────────────────────────────────
+   3. LAYOUT — Container
+   ───────────────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.main {
+  padding-block: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   4. HEADER
+   ───────────────────────────────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: background var(--ease), border-color var(--ease);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 14px;
+  flex-wrap: wrap;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__icon { font-size: 1.4rem; }
+
+.header__title {
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.4px;
+}
+
+/* Theme toggle */
+.btn-theme {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 15px;
+  border-radius: 99px;
+  border: 1.5px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background var(--ease), border-color var(--ease),
+              color var(--ease), box-shadow var(--ease);
+  white-space: nowrap;
+}
+.btn-theme:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   5. BALANCE SECTION
+   ───────────────────────────────────────────────────────────── */
+.balance-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Balance card (gradient) */
+.balance-card {
+  flex: 1 1 240px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: var(--r-xl);
+  padding: 28px;
+  color: #fff;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.balance-card__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: .8;
+}
+
+.balance-card__amount {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--mono);
+  letter-spacing: -1.5px;
+  line-height: 1;
+  word-break: break-all;
+}
+
+/* Limit progress bar */
+.limit-bar-wrap { margin-top: 10px; }
+
+.limit-bar {
+  height: 7px;
+  background: rgba(255,255,255,.3);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.limit-bar__fill {
+  height: 100%;
+  width: 0%;
+  background: #fff;
+  border-radius: 99px;
+  transition: width .5s ease, background .3s ease;
+}
+.limit-bar__fill--warn   { background: var(--warning); }
+.limit-bar__fill--danger { background: var(--danger); }
+
+.limit-bar__text {
+  font-size: 0.72rem;
+  opacity: .85;
+  margin-top: 5px;
+}
+
+/* Over-budget warning */
+.balance-card__warning {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: rgba(239,68,68,.25);
+  border: 1.5px solid rgba(239,68,68,.55);
+  border-radius: var(--r-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  animation: blink 1.6s ease infinite;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: .55; }
+}
+
+/* Budget panel */
+.budget-panel {
+  flex: 1 1 240px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--ease), border-color var(--ease);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.budget-panel__title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.budget-panel__row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.budget-panel__row .input { flex: 1 1 100px; min-width: 80px; }
+
+.budget-panel__current {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  min-height: 1em;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   6. TWO-COLUMN GRID
+   ───────────────────────────────────────────────────────────── */
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 700px) {
+  .grid-two { grid-template-columns: 1fr; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   7. CARD
+   ───────────────────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--ease), border-color var(--ease),
+              box-shadow var(--ease);
+}
+.card:hover { box-shadow: var(--shadow-md); }
+
+.card__title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.card--chart {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   8. FORM FIELDS
+   ───────────────────────────────────────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.field__label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--text-muted);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 13px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 0.93rem;
+  transition: border-color var(--ease), box-shadow var(--ease),
+              background var(--ease);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.input::placeholder { color: var(--text-muted); opacity: .65; }
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99,102,241,.18);
+  background: var(--surface);
+}
+.input--error {
+  border-color: var(--danger) !important;
+  box-shadow: 0 0 0 3px rgba(239,68,68,.15) !important;
+}
+.input--select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+  padding-right: 30px;
+}
+.input--sm { padding: 7px 10px; font-size: 0.82rem; }
+
+.field__error {
+  font-size: 0.75rem;
+  color: var(--danger);
+  font-weight: 600;
+  display: none;
+}
+.field__error--show { display: block; }
+
+/* ─────────────────────────────────────────────────────────────
+   9. BUTTONS
+   ───────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid transparent;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: background var(--ease), color var(--ease),
+              border-color var(--ease), box-shadow var(--ease),
+              transform .1s ease;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.btn--primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 14px rgba(99,102,241,.35);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+.btn--ghost:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.btn--icon {
+  padding: 7px 10px;
+  font-size: 0.8rem;
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-color: transparent;
+  border-radius: var(--r-sm);
+}
+.btn--icon:hover {
+  background: var(--danger);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(239,68,68,.3);
+}
+
+.btn--block { width: 100%; margin-top: 4px; }
+
+/* ─────────────────────────────────────────────────────────────
+   10. CHART
+   ───────────────────────────────────────────────────────────── */
+.chart-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+.chart-container canvas {
+  max-width: 260px;
+  max-height: 260px;
+}
+.chart-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: center;
+  padding: 16px;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   11. TRANSACTION LIST
+   ───────────────────────────────────────────────────────────── */
+.list-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--border);
+}
+.list-head .card__title { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+
+.sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sort-wrap__label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  white-space: nowrap;
+}
+
+/* Scrollable list */
+.tx-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.tx-list::-webkit-scrollbar { width: 5px; }
+.tx-list::-webkit-scrollbar-track { background: transparent; }
+.tx-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+.tx-list__empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 36px 16px;
+  font-size: 0.88rem;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   12. TRANSACTION ITEM
+   ───────────────────────────────────────────────────────────── */
+.tx-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  transition: border-color var(--ease), box-shadow var(--ease),
+              transform .15s ease, background var(--ease);
+  animation: fadeSlide .25s ease;
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.tx-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+/* Colour dot */
+.tx-item__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tx-item__dot--food      { background: var(--food); }
+.tx-item__dot--transport { background: var(--transport); }
+.tx-item__dot--fun       { background: var(--fun); }
+
+/* Text block */
+.tx-item__body { flex: 1; min-width: 0; }
+
+.tx-item__name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tx-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+  flex-wrap: wrap;
+}
+
+/* Category badge */
+.badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+.badge--food      { background: rgba(249,115,22,.14); color: var(--food); }
+.badge--transport { background: rgba(59,130,246,.14);  color: var(--transport); }
+.badge--fun       { background: rgba(168,85,247,.14);  color: var(--fun); }
+
+.tx-item__date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Amount */
+.tx-item__amount {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--danger);
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   13. FOOTER
+   ───────────────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  transition: background var(--ease), border-color var(--ease);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   14. SHAKE UTILITY (injected via JS)
+   ───────────────────────────────────────────────────────────── */
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%     { transform: translateX(-7px); }
+  40%     { transform: translateX(7px); }
+  60%     { transform: translateX(-4px); }
+  80%     { transform: translateX(4px); }
+}
+.shake { animation: shake .5s ease; }
+
+/* ─────────────────────────────────────────────────────────────
+   15. RESPONSIVE — mobile tweaks
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .header__inner { padding-block: 10px; }
+  .header__title { font-size: 0.95rem; }
+
+  .balance-card { padding: 20px; }
+  .balance-card__amount { font-size: 1.9rem; }
+
+  .card { padding: 18px; }
+
+  .budget-panel__row { flex-direction: column; }
+  .budget-panel__row .input { flex: none; }
+
+  .list-head { flex-direction: column; align-items: flex-start; }
+
+  .tx-item { flex-wrap: wrap; }
+}

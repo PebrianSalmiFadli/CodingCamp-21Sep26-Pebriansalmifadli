@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "project": {
+    "name": "Expense & Budget Visualizer",
+    "description": "Client-side web app untuk mencatat, memvisualisasikan, dan memantau pengeluaran harian. Dibuat untuk Mini Project Coding Camp RevoU September 2026.",
+    "type": "web-app",
+    "entryPoint": "index.html"
+  },
+  "stack": {
+    "languages": ["HTML5", "CSS3", "JavaScript (ES6+)"],
+    "libraries": ["Chart.js 4.4.3"],
+    "storage": "LocalStorage",
+    "frameworks": [],
+    "buildTools": [],
+    "packageManager": null
+  },
+  "fileRules": {
+    "css": {
+      "directory": "css/",
+      "maxFiles": 1,
+      "primaryFile": "css/style.css"
+    },
+    "javascript": {
+      "directory": "js/",
+      "maxFiles": 1,
+      "primaryFile": "js/script.js"
+    },
+    "html": {
+      "entryFile": "index.html"
+    }
+  },
+  "localStorageKeys": {
+    "transactions": "ebv_transactions",
+    "theme": "ebv_theme",
+    "budgetLimit": "ebv_limit"
+  },
+  "categories": ["Food", "Transport", "Fun"],
+  "theme": {
+    "default": "light",
+    "modes": ["light", "dark"],
+    "implementation": "data-theme attribute on <html>"
+  },
+  "specs": [
+    {
+      "id": "expense-budget-visualizer",
+      "title": "Expense & Budget Visualizer — Full Feature Build",
+      "path": ".kiro/specs/expense-budget-visualizer/",
+      "status": "completed"
+    }
+  ]
+}
